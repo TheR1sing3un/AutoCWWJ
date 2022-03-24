@@ -1,0 +1,10 @@
+#填写账号密码和推送名称在此处即可,推送逻辑可以自定义,如果真的有人使用,可以找我拿开推送服务,不需要推送的话,推送名称不用填写
+#可根据格式填写多个账号
+users:
+  - username:
+    password:
+    pusherName:
+
+  - username:
+    password:
+    pusherName:
