@@ -86,6 +86,12 @@ func autoDeal(user User) {
 	}
 	cookies := resp.Cookies()
 	vals2 := url.Values{}
+	vals2.Add("sfzx", "1")
+	vals2.Add("tw", "1")
+	vals2.Add("sfcyglq", "0")
+	vals2.Add("sfyzz", "0")
+	vals2.Add("qtqk", "")
+	vals2.Add("ymtys", "0")
 	vals2.Add("area", "陕西省 西安市 长安区")
 	vals2.Add("city", "西安市")
 	vals2.Add("province", "陕西省")
