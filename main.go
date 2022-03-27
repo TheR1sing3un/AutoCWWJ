@@ -34,10 +34,21 @@ func main() {
 	select {}
 }
 
+func init() {
+	file := "./" + "project-log" + ".log"
+	logFile, err := os.OpenFile(file, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0766)
+	if err != nil {
+		panic(err)
+	}
+	log.SetOutput(logFile) // 将文件设置为log输出的文件
+	log.SetPrefix("[AutoCWWJ]")
+	log.SetFlags(log.LstdFlags | log.Lshortfile | log.LUTC)
+	return
+}
+
 func initConfig() (*viper.Viper, error) {
 	//新建一个viper
 	getwd, _ := os.Getwd()
-	fmt.Println(getwd)
 	v := viper.New()
 	//v.SetConfigFile("./config.yaml")
 	v.SetConfigName("config") // 设置文件名称（无后缀）
